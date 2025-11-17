@@ -86,7 +86,7 @@
                             <li>Menyelenggarakan pengabdian kepada masyarakat berbasis riset untuk berperan aktif dalam
                                 memecahkan masalah pembangunan nasional.</li>
                             <li>Mengembangkan kemitraan pada tingkat nasional dan internasional untuk mendukung
-                                pelaksanaan tri dharma perguruan tinggi./</li>
+                                pelaksanaan tri dharma perguruan tinggi.</li>
                         </ul>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {{-- Ulangi blok ini untuk setiap pengumuman --}}
                     <div class="bg-white p-4 shadow-md rounded-lg flex items-center space-x-4 border border-gray-200">
-                        <div class="bg-red-700 text-white text-center rounded-md p-3 w-20 flex-shrink-0">
+                        <div class="bg-red-700 text-white text-center rounded-md p-3 w-20 shrink-0">
                             <div class="text-2xl font-bold">27</div>
                             <div class="text-sm">Oct 25</div>
                         </div>
@@ -178,7 +178,7 @@
                         </div>
                     </div>
                     <div class="bg-white p-4 shadow-md rounded-lg flex items-center space-x-4 border border-gray-200">
-                        <div class="bg-red-700 text-white text-center rounded-md p-3 w-20 flex-shrink-0">
+                        <div class="bg-red-700 text-white text-center rounded-md p-3 w-20 shrink-0">
                             <div class="text-2xl font-bold">20</div>
                             <div class="text-sm">Jul 25</div>
                         </div>
