@@ -61,25 +61,29 @@
             </div>
 
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-stretch"> {{-- 'items-stretch' agar tingginya sama --}}
-
-                    <div class="md:col-span-3">
-                        <video class="w-full h-full object-cover rounded-lg shadow-xl" controls autoplay muted loop>
+                {{-- DIUBAH: md:grid-cols-5 menjadi md:grid-cols-2 --}}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                    {{-- DIUBAH: md:col-span-3 menjadi md:col-span-1 --}}
+                    <div class="md:col-span-1">
+                        {{-- DIUBAH: h-full menjadi aspect-video --}}
+                        <video class="w-full aspect-video object-cover rounded-lg shadow-xl" controls autoplay muted
+                            loop>
                             <source src="{{ asset('videos/IklanKampus.mp4') }}" type="video/mp4">
                             Browser Anda tidak mendukung tag video.
                         </video>
                     </div>
 
+                    {{-- DIUBAH: md:col-span-2 menjadi md:col-span-1 --}}
                     <div
-                        class="md:col-span-2 bg-white text-gray-800 p-6 rounded-lg shadow-xl flex flex-col justify-center">
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">VISI</h2>
-                        <ul aria-activedescendant=""class="list-disc list-inside space-y-2 text-gray-700 text-base">
+                        class="md:col-span-1 bg-white text-gray-800 p-8 rounded-lg shadow-xl flex flex-col justify-center">
+                        <h2 class="text-4xl font-bold text-blue-900 mb-6">VISI</h2>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg">
                             <li>Menjadi perguruan tinggi unggul dan berwawasan enterpreneurship pada tahun 2025.</li>
                         </ul>
 
-                        <h2 class="text-3xl font-bold text-blue-900 mb-4">MISI</h2>
-                        <ul class="list-disc list-inside space-y-2 text-gray-700 text-base">
-                            <li>MenyMenyelenggarakan pendidikan untuk menghasilkan sumberdaya manusia yang berbudaya
+                        <h2 class="text-4xl font-bold text-blue-900 mb-6 mt-6">MISI</h2>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg">
+                            <li>Menyelenggarakan pendidikan untuk menghasilkan sumberdaya manusia yang berbudaya
                                 mutu dan berwawasan enterprenuership.</li>
                             <li>Menyelenggarakan penelitian, untuk meningkakan mutu pendidikan dan pengembangan IPTEK
                                 berdasar nilai-nilai enterpreneurship.</li>
