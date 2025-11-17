@@ -70,7 +70,7 @@
                         </video>
                     </div>
 
-                    <div
+                    <div>
                         class="md:col-span-2 bg-white text-gray-800 p-6 rounded-lg shadow-xl flex flex-col justify-center">
                         <h2 class="text-3xl font-bold text-blue-900 mb-4">VISI</h2>
                         <ul aria-activedescendant=""class="list-disc list-inside space-y-2 text-gray-700 text-base">
@@ -86,7 +86,7 @@
                             <li>Menyelenggarakan pengabdian kepada masyarakat berbasis riset untuk berperan aktif dalam
                                 memecahkan masalah pembangunan nasional.</li>
                             <li>Mengembangkan kemitraan pada tingkat nasional dan internasional untuk mendukung
-                                pelaksanaan tri dharma perguruan tinggi.</li>
+                                pelaksanaan tri dharma perguruan tinggi./</li>
                         </ul>
                     </div>
                 </div>
