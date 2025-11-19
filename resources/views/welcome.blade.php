@@ -14,9 +14,6 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    {{-- Tambahkan script untuk slider (misal: Alpine.js atau Swiper.js) jika diperlukan --}}
-    {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
-
 </head>
 
 <body class="bg-gray-100 font-sans antialiased">
@@ -26,7 +23,6 @@
             <div class="flex justify-between items-center py-4">
                 <div>
                     <a href="{{ url('/') }}">
-                        {{-- Ganti 'images/logo-ubhi.png' dengan path logo Anda di folder 'public/images' --}}
                         <img class="h-14" src="https://ubhi.ac.id/assets/images/logo-ubhi.png"
                             alt="Universitas Bhinneka PGRI">
                     </a>
@@ -54,26 +50,28 @@
 
     <main>
 
-        <section class="relative bg-blue-900 text-white py-20 flex items-center">
+        {{-- Section Hero (Video dan Visi Misi) --}}
+        <section class="relative bg-blue-900 text-white">
             {{-- Background --}}
             <div class="absolute inset-0 bg-cover bg-center"
                 style="background-image: url('https://ubhi.ac.id/assets/images/gallery/IMG_5738.JPG'); opacity: 0.3;">
             </div>
 
-            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-                {{-- DIUBAH: md:grid-cols-5 menjadi md:grid-cols-2 --}}
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                    {{-- DIUBAH: md:col-span-3 menjadi md:col-span-1 --}}
-                    <div class="md:col-span-1">
-                        {{-- DIUBAH: h-full menjadi aspect-video --}}
-                        <video class="w-full aspect-video object-cover rounded-lg shadow-xl" controls autoplay muted
-                            loop>
+            {{-- Container dengan padding vertikal (py-12) --}}
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 py-12">
+
+                {{-- DIUBAH: Grid menjadi 3 kolom --}}
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+                    {{-- DIUBAH: Video mengambil 2 kolom (66%) --}}
+                    <div class="md:col-span-2">
+                        <video class="w-full h-full object-cover rounded-lg shadow-xl" controls autoplay muted loop>
                             <source src="{{ asset('videos/IklanKampus.mp4') }}" type="video/mp4">
                             Browser Anda tidak mendukung tag video.
                         </video>
                     </div>
 
-                    {{-- DIUBAH: md:col-span-2 menjadi md:col-span-1 --}}
+                    {{-- DIUBAH: Visi Misi mengambil 1 kolom (33%) --}}
                     <div
                         class="md:col-span-1 bg-white text-gray-800 p-8 rounded-lg shadow-xl flex flex-col justify-center">
                         <h2 class="text-4xl font-bold text-blue-900 mb-6">VISI</h2>
@@ -97,11 +95,11 @@
             </div>
         </section>
 
+        {{-- Section Berita --}}
         <section class="py-16 bg-white">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="shadow-lg rounded-lg overflow-hidden">
-                        {{-- Ganti gambar --}}
                         <img src="https://ubhi.ac.id/assets/images/news/PMB_2025_ARIS_1714972323.jpg"
                             alt="Penerimaan Mahasiswa Baru" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -112,7 +110,6 @@
                         </div>
                     </div>
                     <div class="shadow-lg rounded-lg overflow-hidden">
-                        {{-- Ganti gambar --}}
                         <img src="https://ubhi.ac.id/assets/images/news/BIAYA_KULIAH_UBHI_1709795029.jpg"
                             alt="Biaya Kuliah" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -122,7 +119,6 @@
                         </div>
                     </div>
                     <div class="shadow-lg rounded-lg overflow-hidden">
-                        {{-- Ganti gambar --}}
                         <img src="https://ubhi.ac.id/assets/images/news/KEUNGGULAN_UBHI_1709447455.jpg"
                             alt="Keunggulan Kampus" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -135,11 +131,11 @@
             </div>
         </section>
 
+        {{-- Section Aktivitas --}}
         <section class="py-16 bg-gray-50">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Latest Activity</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {{-- Ulangi blok ini untuk setiap berita --}}
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                         <img src="https://ubhi.ac.id/assets/images/news/INBIS_KOPMA_AMANAH_1731644742.jpeg"
                             alt="Activity" class="w-full h-48 object-cover">
@@ -160,16 +156,15 @@
                             <a href="#" class="text-blue-800 hover:underline font-medium">Read more</a>
                         </div>
                     </div>
-                    {{-- Tambahkan kartu lainnya --}}
                 </div>
             </div>
         </section>
 
+        {{-- Section Pengumuman --}}
         <section class="py-16 bg-white">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Latest Notice</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {{-- Ulangi blok ini untuk setiap pengumuman --}}
                     <div class="bg-white p-4 shadow-md rounded-lg flex items-center space-x-4 border border-gray-200">
                         <div class="bg-red-700 text-white text-center rounded-md p-3 w-20 shrink-0">
                             <div class="text-2xl font-bold">27</div>
@@ -192,11 +187,11 @@
                             <p class="text-sm text-gray-500">SK Lolos Seleksi Penelitian Internal TA 2425.pdf</p>
                         </div>
                     </div>
-                    {{-- Tambahkan pengumuman lainnya --}}
                 </div>
             </div>
         </section>
 
+        {{-- Section Quick Links --}}
         <section class="py-16 bg-gray-50">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -213,7 +208,6 @@
                             <li><a href="#" class="text-gray-700 hover:text-blue-800 flex items-center"><i
                                         class="fas fa-chevron-right mr-3 text-sm text-blue-800"></i>Sistem Perpustakaan
                                     (Simperpus)</a></li>
-                            {{-- Tambahkan link lainnya --}}
                         </ul>
                     </div>
 
@@ -225,18 +219,17 @@
                                     Informatika</a></li>
                             <li><a href="#" class="text-gray-700 hover:text-blue-800">Telah Dibuka Pendaftaran
                                     Kampus Mengajar Angkatan 7</a></li>
-                            {{-- Tambahkan link lainnya --}}
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        {{-- Section Partner --}}
         <section class="py-16 bg-white">
             <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-bold text-gray-800 mb-10">Our Partners</h2>
                 <div class="flex justify-center items-center space-x-8 md:space-x-12 flex-wrap">
-                    {{-- Ganti dengan logo partner Anda --}}
                     <img src="https://ubhi.ac.id/assets/images/partner/BNI_logo.svg" alt="BNI"
                         class="h-12 grayscale hover:grayscale-0 transition duration-300">
                     <img src="https://ubhi.ac.id/assets/images/partner/bank-mandiri-logo.png" alt="Mandiri"
